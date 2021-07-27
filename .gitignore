@@ -1,0 +1,6 @@
+.env
+.vscode
+*.code-workspace
+node_modules
+build/
+build_optimistic/

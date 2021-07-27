@@ -1,0 +1,62 @@
+{
+  "name": "@thesolidchain/defi-contracts",
+  "version": "1.0.0",
+  "description": "Smart Contract library for DeFi DApp Development",
+  "main": "truffle-config.js",
+  "scripts": {
+    "clean": "npx rimraf build/* deployments/*.log",
+    "compile:ethereum": "npx truffle compile --config truffle-config.js",
+    "compile:optimistic": "npx truffle compile --config truffle-config.ovm.js",
+    "migrate:dev": "npx truffle migrate --network dev --reset | tee deployments/deploy.dev.log",
+    "ganache:dev": "node run-ganache --network dev",
+    "migrate:bsc-local-testnet": "npx truffle migrate --network bsc-local-testnet --reset | tee deployments/deploy.bsc-local-testnet.log",
+    "migrate:bsc-testnet": "npx truffle migrate --network bsc-testnet --reset | tee deployments/deploy.bsc-testnet.log",
+    "migrate:bsc-local-mainnet": "npx truffle migrate --network bsc-local-mainnet --reset | tee deployments/deploy.bsc-local-mainnet.log",
+    "migrate:bsc-mainnet": "npx truffle migrate --network bsc-mainnet --reset | tee deployments/deploy.bsc-mainnet.log",
+    "migrate:eth-local-ropsten": "npx truffle migrate --network eth-local-ropsten --reset | tee deployments/deploy.eth-local-ropsten.log",
+    "migrate:eth-ropsten": "npx truffle migrate --network eth-ropsten --reset | tee deployments/deploy.eth-ropsten.log",
+    "migrate:eth-local-mainnet": "npx truffle migrate --network eth-local-mainnet --reset | tee deployments/deploy.eth-local-mainnet.log",
+    "migrate:optimistic-local-node": "npx truffle migrate --config truffle-config.ovm.js --network optimistic-local-node --reset | tee deployments/deploy.optimistic-local-node.log",
+    "migrate:optimistic-local-kovan": "npx truffle migrate --config truffle-config.ovm.js --network optimistic-local-kovan --reset | tee deployments/deploy.optimistic-local-kovan.log",
+    "migrate:optimistic-kovan": "npx truffle migrate --config truffle-config.ovm.js --network optimistic-kovan --reset | tee deployments/deploy.optimistic-kovan.log",
+    "migrate:optimistic-local-mainnet": "npx truffle migrate --config truffle-config.ovm.js --network optimistic-local-mainnet --reset | tee deployments/deploy.optimistic-local-mainnet.log",
+    "migrate:optimistic-mainnet": "npx truffle migrate --config truffle-config.ovm.js --network optimistic-mainnet --reset | tee deployments/deploy.optimistic-mainnet.log",
+    "ganache:bsc-local-testnet": "node run-ganache --network bsc-local-testnet --blocktime 3",
+    "ganache:bsc-local-mainnet": "node run-ganache --network bsc-local-mainnet --blocktime 3",
+    "ganache:eth-local-ropsten": "node run-ganache --network eth-local-ropsten --blocktime 3",
+    "ganache:eth-local-mainnet": "node run-ganache --network eth-local-mainnet --blocktime 3",
+    "ganache:optimistic-local-kovan": "node run-ganache --network optimistic-local-kovan --blocktime 3",
+    "ganache:optimistic-local-mainnet": "node run-ganache --network optimistic-local-mainnet --blocktime 3"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "binance",
+    "optimism",
+    "smart",
+    "contracts",
+    "security",
+    "thesolidchain"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabr1e11/defi-contracts"
+  },
+  "author": "Roberto Cano (gabr1e11)",
+  "license": "MIT",
+  "devDependencies": {
+    "@eth-optimism/solc": "^0.7.6-alpha.1",
+    "@openzeppelin/contracts": "^4.2.0",
+    "@truffle/artifactor": "^4.0.113",
+    "@truffle/hdwallet-provider": "^1.4.1",
+    "dotenv": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "solc": "^0.8.6",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.7.16",
+    "truffle": "^5.4.1",
+    "truffle-contract-size": "^2.0.1",
+    "yargs": "^13.3.2"
+  }
+}
